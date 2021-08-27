@@ -4,6 +4,7 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
+import com.zainco.codingflowtodo.data.SortOrder
 import com.zainco.codingflowtodo.data.Task
 import com.zainco.codingflowtodo.data.TaskDao
 import kotlinx.coroutines.flow.Flow
@@ -28,4 +29,3 @@ class TasksViewModel @ViewModelInject constructor(private val taskDao: TaskDao) 
 
 }
 
-enum class SortOrder { BY_NAME, BY_DATE }
