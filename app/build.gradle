@@ -64,8 +64,12 @@ dependencies {
 
     // Room
     implementation "androidx.room:room-runtime:$roomVersion"
-    kapt "androidx.room:room-compiler:$roomVersion"
-    implementation "androidx.room:room-ktx:$roomVersion"
+    kapt ("androidx.room:room-compiler:$roomVersion"){
+        exclude group: 'org.antlr', module: 'antlr4-runtime'
+    }
+    implementation ("androidx.room:room-ktx:$roomVersion"){
+        exclude group: 'org.antlr', module: 'antlr4-runtime'
+    }
 
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
